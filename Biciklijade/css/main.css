@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Montserrat','sans-serif';
+}
+
+
+p{
+    font-size: .9em;
+    line-height: 1.6em;
+}
+
+
+
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.lista15{
+    list-style-type: circle;
+    list-style-position:inside;
+}
+
+.kontejner{
+    text-align: center;
+    padding:.8em 1.2em;
+}
+
+.logo{
+    width: 120px;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+}
+
+.sakrij-mobitel{
+    display:none;
+    justify-content: space-between;
+}
+
+.izbornik{
+    width: 25px;
+    margin-top: 111%;
+}
+
+.bicikle{
+    width: 100%;
+}
+
+.podnaslov{
+    font-size: 1.1em;
+}
+
+.kontejner2{
+    margin-top: 15%;
+    padding: 4em 0 2em;
+    background: #cccccc;
+    width: 100%;
+    color:red;
+    border-radius: 12px;
+}
+
+.kontejner2 ul li{
+    margin-bottom: 3em;
+}
+
+.kontejner2 ul li{
+    padding: 0 .5em;
+}
+
+.kontejner2 img{
+    width: 20%;
+}
+
+.kontejner2 ul li:first-child img{
+    width:12%;
+}
+
+.kontejner2 ul li:nth-child(2) img{
+    width:18%;
+}
+
+.kontejner3{
+    background-color: gray;
+    padding: 2em;
+    border-radius: 12px;
+}
+
+figcaption{
+    color: white;
+}
+
+h2{
+    margin-top: 3em;
+}
+
+.botun{
+    background: orangered;
+    border-radius: 25px;
+    padding: .5em;
+    width: calc(100%-1em);
+    display: block;
+    text-decoration: none;
+    font-size:2em
+}
+
+.kontejner4{
+    background: #cccccc;
+    padding: 2em 0;
+}
+
+.podnozje-poveznice{
+    margin: 0 auto;
+}
+
+.podnozje-poveznice li{
+    display: inline-block;
+}
+.podnozje-poveznice li a{
+    color:red;
+}
+
+nav ul{
+    position:fixed;
+    width: 50%;
+    top:0;
+    right:0;
+    text-align: left;
+    background-color: #e8e8e8;
+    height: 100%;
+    z-index: 10;
+    padding-top: 3em; 
+    border-radius-top-left:15px; 
+}
+
+nav ul li a{
+    color: red;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    background-color: #cccccc
+}
+
+nav ul li a:hover{
+    background-color: #b1b1b1;
+}
+
+.izadi-botun{
+    margin-bottom: 1em;
+    margin-top: -1.5em;
+    text-align: right;
+    padding : 0 1em;
+}
+
+.izadi-botun img{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 650px){
+    .bicikle{
+        width: 50%;
+    }
+
+    
+    hi{
+        font-size:3em;
+        margin: 0;
+    }
+    .podnaslov{
+        font-size:1.4em;
+        margin-bottom: 0.1%;
+    }
+
+    .kontejner2{
+        margin: 0;
+    }
+
+    .kontejner2 img{
+        width:20%
+    }
+
+    .kontejner2 ul li:first-child img{
+        width:9%;
+    }
+
+    .kontejner2 ul li:nth-child(2) img{
+        width:13%;
+    }
+    
+    .kontejner2 ul{
+        display: flex;
+        align-items: center;
+    }
+
+    .kontejner3 ul{
+        display: flex;   
+    }
+    
+    nav ul{
+        width: 35%;
+    }
+    
+    .botun{
+        width:50%;
+    } 
+}
+
+@media only screen and (min-width: 1024px){
+    .pokazi-racunalo{
+        display: block;
+        margin: 0 auto 30% auto;
+    }
+    
+    .sakrij-racunalo{
+        display: none;
+    }
+    
+    nav ul{
+        position: inherit;
+        width: auto;
+        height: auto;
+        display: flex;
+        background: none;
+        padding:none;
+    }
+    nav ul li{
+        float:left;
+    }
+    nav ul li a{
+        color: black;
+        background-color: white;
+    }
+    
+    .logo{
+        margin-top: -105px;
+    }
+}

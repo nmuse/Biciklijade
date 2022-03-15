@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script type="text/javascript" src="../javascript/nmuse.js"></script>
+        <title>Biciklijada</title>
+    </head>
+    <body >
+        <div class="kontejner">
+            <header>
+                <img src="multimedija/biciklijada-logo.svg" alt="biciklijada-logo" class="logo">
+
+                <nav>
+                    <a href ="#" class="sakrij-racunalo">
+                        <img src="multimedija/izbornik.svg" alt="izbornik" class="izbornik" id="izbornik">
+                    </a>
+
+                    <ul class="pokazi-racunalo sakrij-mobitel" id="nav">
+                        <li id = "izadi" class = "izadi-botun sakrij-racunalo"><img src = "multimedija/izbornik-izlaz.svg" alt="izadi-iz-izbornika"></li>
+                        <li><a href="index.php">Početna</a></li>
+                        <li><a href="obrasci/prijava.php">Prijava</a></li>
+                        <li><a href="lokacije.php">Lokacije</a></li>
+                        <li><a href="privatno/korisnici.php">Korisnici</a></li>
+                        <li><a href="obrasci/registracija.php">Registracija</a></li>
+                        <li><a href="dokumentacija.html">Dokumentacija</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <img src="multimedija/moja_slika.png" alt="moja-slika" class="bicikle">
+
+                <h1>Nikola Muše</h1>
+                <p class="podnaslov"></p>
+
+            </section>
+
+            <p class="podnaslov">nmuse@foi.hr</p>
+            <p>Matični broj : 601983 11 0016131266 2</p>
+            <p>Student 3. godine na smjeru Informacijski sustavi.</p>
+            <p>Tema projekta : Biciklijada.</p>
+            
+        </div>
+
+        <div class="kontejner2">
+            <div class="kontejner">
+                <ul>
+                    <li>
+                        <img src="multimedija/slika2.svg" alt="slika2">
+                        <p>1lorem ipsum dolor sit amet,...</p>
+                    </li>
+                    <li>
+                        <img src="multimedija/slika3.svg" alt="slika3">
+                        <p>2lorem ipsum dolor sit amet,...</p>
+                    </li>
+                    <li>
+                        <img src="multimedija/slika4.svg" alt="slika4">
+                        <p>3lorem ipsum dolor sit amet,...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="kontejner3">
+            <div class="kontejner">
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="multimedija/slika5.svg" alt="slika5">
+                            <blockquote>lorem ibusm...lorem ibusm...lorem ibusm...lorem ibusm...</blockquote>
+                            <figcaption>lorem ibusm...</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="multimedija/slika6.svg" alt="slika6">
+                            <blockquote>lorem ibusm...lorem ibusm...lorem ibusm...lorem ibusm...</blockquote>
+                            <figcaption>lorem ibusm...</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="kontejner">
+            <h2>lorem ibsum...</h2>
+            <a href="#" class="botun">lorem ibsum...</a>
+        </div>
+
+        <footer>
+            <div class="kontejner4">
+                <div class="kontejner">
+                    <a href="#">
+                        <img src="multimedija/slika7.svg" class="slika6" alt="slika7">
+                    </a>
+                    <p class="na-dnu">lorem ibsum...lorem ibsum...lorem ibsum...<br>lorem...</p>
+                    <ul class="podnozje-poveznice">
+                        <li><a href="#">lorem ibsum...lorem ibsum...</a></li>
+                        <li><a href="#">lorem ibsum...lorem...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var izbornik = document.getElementById('izbornik');
+            var nav = document.getElementById('nav');
+            var izlaz = document.getElementById('izadi');
+
+            izbornik.addEventListener('click', function (e) {
+                nav.classList.toggle('sakrij-mobitel');
+                e.preventDefault();
+            });
+            izlaz.addEventListener('click', function (e) {
+                nav.classList.toggle('sakrij-mobitel');
+                e.preventDefault();
+            });
+        </script>
+
+    </body>
+</html>

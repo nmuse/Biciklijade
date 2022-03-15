@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Biciklijada"
+AuthUserFile /var/www/WebDiP/2019_projekti/WebDiP2019x089/nmuse.txt
+Require valid-user

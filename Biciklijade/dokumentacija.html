@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script type="text/javascript" src="../javascript/nmuse.js"></script>
+        <title>Biciklijada</title>
+    </head>
+    <body >
+        <div class="kontejner">
+            <header>
+                <img src="multimedija/biciklijada-logo.svg" alt="biciklijada-logo" class="logo">
+
+                <nav>
+                    <a href ="#" class="sakrij-racunalo">
+                        <img src="multimedija/izbornik.svg" alt="izbornik" class="izbornik" id="izbornik">
+                    </a>
+
+                    <ul class="pokazi-racunalo sakrij-mobitel" id="nav">
+                        <li id = "izadi" class = "izadi-botun sakrij-racunalo"><img src = "multimedija/izbornik-izlaz.svg" alt="izadi-iz-izbornika"></li>
+                        <li><a href="index.php">Početna</a></li>
+                        <li><a href="obrasci/prijava.php">Prijava</a></li>
+                        <li><a href="lokacije.php">Lokacije</a></li>
+                        <li><a href="privatno/korisnici.php">Korisnici</a></li>
+                        <li><a href="obrasci/registracija.php">Registracija</a></li>
+                        <li><a href="dokumentacija.html">Dokumentacija</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <img src="multimedija/nmuse_ERA.png" alt="era-model" class="bicikle">
+
+                <h1>Era model</h1>
+                <p class="podnaslov"></p>
+
+            </section>
+
+            <p class="podnaslov">Opis projektnog zadatka</p>
+            <p>Sustav služi za organizaciju i provedbu biciklijade.</p>
+            <p class="podnaslov">Uloge</p>
+            <ul class="lista15">
+                <li>Neregistrirani korisnik</li>
+                <li>Registrirani korisnik</li>
+                <li>Moderator/sudac</li>
+                <li>Administrator</li>
+            </ul>
+            <p class="podnaslov"><b>Detaljne upute</b></p>
+            <p class="podnaslov">Administrator / Organizator</p>
+
+            <ul class="lista15">
+                <li>Kreira lokacije za biciklijadu (npr. Hrvatska - Zadar, Italija - Rim, …) i dodjeljuje moderatore
+                    lokaciji.</li>
+                <li>Kreira utrke za biciklijadu, određuje startninu (npr. 100kn) i broj natjecatelja te datum i
+                    vrijeme početka utrke.</li>
+                <li>Vidi popis svih završenih utrka i proglašava pobjednika inicijalno mu je odabran onaj koji je
+                    prvi no može odabrati i drugog korisnika uz navođenje razloga zašto nije odabrao prvog.</li>
+
+            </ul>
+            
+            <p class="podnaslov">Moderator / Sudac</p>
+
+            <ul class="lista15">
+                <li>Evidentira rezultate za korisnike nakon početka utrke unoseći: datum i vrijeme završetka
+utrke tog korisnika. Ne može unijeti rezultat za korisnika koji je odustao.</li>
+                <li>Vidi rang listu za utrke za koje je zadužen sortirano po vremenu završetka i može proglasiti
+kraj utrke.</li>
+                <li>Vidi popis svih korisnika koji su odustali od utrke i razloge zašto.</li>
+                <li>Vidi prijave korisnika i prihvaća ili odbija prijavu. Ako prihvati izdaje se račun korisniku. Ne
+može prihvati više korisnika nego ima mogućih natjecatelja.</li>
+                <li>Pregledava statistiku ukupnog broja korisnika koji su završili neku utrku i broja korisnika koji
+su odustali od neke utrke u vremenskom razdoblju (od-do) po lokaciji biciklijade.</li>
+
+            </ul>
+            
+            <p class="podnaslov">Registrirani korisnik / Biciklist</p>
+
+            <ul class="lista15">
+                <li>Može poslati prijavu za utrku. U prijavi unosi ime, prezime, godina rođenja i sl.</li>
+                <li>Vidi svoje rezultate za utrke na kojima je sudjelovao.</li>
+                <li>Može postaviti sliku nakon što je unesen njegov rezultat te može dati dozvolu da se slika
+prikazuje u javnom prikazu.</li>
+                <li>Može odustati za vrijeme utrke te unosi razlog odustajanja.</li>
+                <li>Vidi popis svojih prijava i može platiti račun za startinu za prijavu tako da postavi pdf u kojem
+je potvrda o plaćanju. Uplatu mora napraviti do početka utrke.</li>
+
+            </ul>
+            
+            <p class="podnaslov">Neregistrirani korisnik</p>
+
+            <ul class="lista15">
+                <li>Vidi popis lokacija biciklijada sa ukupnim brojem utrka na toj lokaciji.</li>
+                <li>Odabirom lokacije vidi galeriju slika pobjednika utrka sa te lokacije. Ako nije dana suglasnost
+od korisnika slika ne prikazuje.</li>
+                <li>Može pretraživati utrke (koje još nisu počele) po datumu početka utrke uz mogućnost
+filtriranja po lokaciji biciklijade i sortiranja po broju mogućih natjecatelja u utrci ili datumu
+početka.</li>
+
+            </ul>
+            
+            <p class="podnaslov"><b>Korišteni alati</b></p>
+
+            <ul class="lista15">
+                <li>Apache NetBeans - korišten za pisanje koda</li>
+                <li>FileZilla - prijenos datoteka na server</li>
+                <li>jQuery - brže i efikasnije izvođenje zadataka</li>
+                <li>dataTables - za lakše manipuliranje tablicama</li>
+                <li>baza.class.php - za rad sa bazom</li>
+                <li>sesija.class.php - za rad sa sesijom</li>
+            </ul>
+
+            <p class="podnaslov"><b>Opis datoteka u projektu</b></p>
+            
+            <p class="podnaslov">ostalo.php</p>
+            <p>Prikazivanje dnevnika administratoru. Zapisane su osnovne informacije o radu sustava (vrijeme, radnja i korisnik)</p>
+            
+            <p class="podnaslov">prijava.php</p>
+            <p>Korisnik se prijavljuje na stranicu, može odabrati želi li ostati zapamćen ili ne i ovisno o tome se bilježe podaci u kolačić. Za prijavljenog korisnika se kreira sesija. Na istoj stranici se može i odjaviti te otići na skriptu za resetiranje lozinke.</p>
+            
+            <p class="podnaslov">provjeraKorime.php</p>
+            <p>Prilikom registriranja, provjera postoji li već korisnik sa tim korisničkim imenom u bazi te onemogućuje kreiranje istog ukoliko postoji.</p>
+            
+            <p class="podnaslov">registracija.php</p>
+            <p>Registracija novog korisnika. Sadrži i kontrole koje onemogućavaju registriranje korisnika sa neispravnim podacima.</p>
+            
+            <p class="podnaslov">vrijeme.php</p>
+            <p>Služi za podešavanje virtualnog vremena. Vrijeme u aplikaciji(stvarno vrijeme na serveru) se korigira za određeni pomak. Namještanje pomaka se radi na adresi koju smo dobili u zadatku te se zatim u ovoj skripti sprema pomak vremena. Kada se odradi to namještanje imamo virtualno vrijeme.</p>
+            
+            <p class="podnaslov">dnevnik.log</p>
+            <p>U ovu datoteku se spremaju sve radnje koje se obavljaju u aplikaciji. Svaki zahtjev je zapisan u obliku kada je učinjeno, što je učinjeno i tko učinio.</p>
+            
+            <p class="podnaslov">.htaccess</p>
+            <p>Služi za autorizaciju kako bi mogli pristupi stranici korisnici.php. Podaci korisnika za autorizaciju se nalaze u datoteci nmuse.txt</p>
+            
+            <p class="podnaslov">korisnici.php</p>
+            <p>U tablicu se ispisuju korisnici iz baze podataka. Prije toga je nužna autorizacija.</p>
+            
+            <p class="podnaslov">baza.class.php</p>
+            <p>Dobili od profesora za lakši rad sa bazom.</p>
+            
+            <p class="podnaslov">blokirajSkripta</p>
+            <p>Skipta koja služi adminu kada želi blokirati nekog korisnika.</p>
+            
+            <p class="podnaslov">deblokirajSkripta</p>
+            <p>Skipta koja služi adminu kada želi deblokirati nekog korisnika.</p>
+            
+            <p class="podnaslov">deblokirajAdmin</p>
+            <p>Stranica na kojoj admin ima uvik u korisnike te ima mogućnost blokiranja i deblokiranja pojedinih korisnika(to se obavlja pozivom jedne od prethodne dvije skripte).</p>
+            
+            <p class="podnaslov">deblokiranjeDohvat</p>
+            <p>Za dohvaćanje podataka o korisnicima za prethodno navedenu stranicu.</p>
+            
+            <p class="podnaslov">main.css</p>
+            <p>Za uljepšavanje i raspored stranice te prilagodbu medijima.</p>
+            
+            <p class="podnaslov">deblokiranjeDohvat</p>
+            <p>Za dohvaćanje podataka o korisnicima za prethodno navedenu stranicu.</p>
+            
+            <p class="podnaslov">dohvatiKorisnika</p>
+            <p>Za dohvaćanje podataka o korisnicima za stranicu korisnici.php.</p>
+            
+            <p class="podnaslov">dohvatiLokacije</p>
+            <p>Za dohvaćanje podataka o lokacijama. Koristi se u lokacije.php</p>
+            
+            <p class="podnaslov">dokumentacija.html</p>
+            <p>Trenutna stranica. Za opisivanje projekta.</p>
+            
+            <p class="podnaslov">index.php</p>
+            <p>Početna stranica za ovaj projekt.</p>
+            
+            <p class="podnaslov">konfiguriranjeAdmin.php</p>
+            <p>Stranica na kojoj administrator može konfigurirati neke postavke sustava kao što su broj neuspješnih prijava nakon kojeg slijedi blokiranje, trajanje aktivacijskog linka i slično.</p>
+            
+            <p class="podnaslov">lokacijaAdmin.php</p>
+            <p>Administrator na ovoj stranici može dodavati nove lokacije i dodjeliti im moderatora.</p>
+            
+            <p class="podnaslov">lokacije.php</p>
+            <p>Ispisuju se sve lokacije te broj utrka održanih na toj lokaciji.</p>
+            
+            <p class="podnaslov">meni.php</p>
+            <p>Služi za umetanje navigacije u stranice te ograničavanje koja tip korisnika može vidjeti koje poveznice na druge stranice.</p>
+            
+            <p class="podnaslov">nmuse.js</p>
+            <p>Za dohvaćanje podataka iz baze (preko ajax zahtjeva), validaciju registracije sa strane klijenta sa definiranim provjerama te provjeru zauzetosti korisničkog imena(ajax) .</p>
+            
+            <p class="podnaslov">nmuse.txt</p>
+            <p>Pohranjeni podaci za autorizaciju u korisnici.php.</p>
+            
+            <p class="podnaslov">odjava.php</p>
+            <p>Služi za odjavljivanje prijavljenog korisnika odnosno brisanje sesije.</p>
+            
+            <p class="podnaslov">postavkeSustava.php</p>
+            <p>Služi za rukovanje između skripte za podešavanje postavki sustava i baze podataka.</p>
+            
+            <p class="podnaslov">provjera.php</p>
+            <p>Služi za provjeravanje postoji li već korisničko ime u bazi podataka.</p>
+            
+            <p class="podnaslov">sesija.class.php</p>
+            <p>Profesori pripremili za lakši rad za sesijama.</p>
+            
+            <p class="podnaslov">utrkeAdmin.php</p>
+            <p>Administrator preko ove stranice može dodavati nove utrke u bazu.</p>
+            
+            <p class="podnaslov">zaboravljenaLozinka.php</p>
+            <p>Preko ove stranice se resetira korisnikova loznka na način da on upiše mail, a aplikacija mu pošalje novu šifru na mail.</p>
+            
+            <p class="podnaslov">zaglavlje.php</p>
+            <p>Služi nam za lakši rad sa putanjama te dodavanja zapisa u dnevnik.</p>
+            
+            
+        </div>
+
+        <div class="kontejner2">
+            <div class="kontejner">
+                <ul>
+                    <li>
+                        <img src="multimedija/slika2.svg" alt="slika2">
+                        <p>1lorem ipsum dolor sit amet,...</p>
+                    </li>
+                    <li>
+                        <img src="multimedija/slika3.svg" alt="slika3">
+                        <p>2lorem ipsum dolor sit amet,...</p>
+                    </li>
+                    <li>
+                        <img src="multimedija/slika4.svg" alt="slika4">
+                        <p>3lorem ipsum dolor sit amet,...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="kontejner3">
+            <div class="kontejner">
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="multimedija/slika5.svg" alt="slika5">
+                            <blockquote>lorem ibusm...lorem ibusm...lorem ibusm...lorem ibusm...</blockquote>
+                            <figcaption>lorem ibusm...</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="multimedija/slika6.svg" alt="slika6">
+                            <blockquote>lorem ibusm...lorem ibusm...lorem ibusm...lorem ibusm...</blockquote>
+                            <figcaption>lorem ibusm...</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="kontejner">
+            <h2>lorem ibsum...</h2>
+            <a href="#" class="botun">lorem ibsum...</a>
+        </div>
+
+        <footer>
+            <div class="kontejner4">
+                <div class="kontejner">
+                    <a href="#">
+                        <img src="multimedija/slika7.svg" class="slika6" alt="slika7">
+                    </a>
+                    <p class="na-dnu">lorem ibsum...lorem ibsum...lorem ibsum...<br>lorem...</p>
+                    <ul class="podnozje-poveznice">
+                        <li><a href="#">lorem ibsum...lorem ibsum...</a></li>
+                        <li><a href="#">lorem ibsum...lorem...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var izbornik = document.getElementById('izbornik');
+            var nav = document.getElementById('nav');
+            var izlaz = document.getElementById('izadi');
+
+            izbornik.addEventListener('click', function (e) {
+                nav.classList.toggle('sakrij-mobitel');
+                e.preventDefault();
+            });
+            izlaz.addEventListener('click', function (e) {
+                nav.classList.toggle('sakrij-mobitel');
+                e.preventDefault();
+            });
+        </script>
+
+    </body>
+</html>
